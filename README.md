@@ -36,3 +36,5 @@ Lines of Code: ~500
 Hours spent: ~15
 
 Lmk if u have questions!
+
+NOTE: if you want to change the size of the application, change gamesize on line 13, and size on line 17
