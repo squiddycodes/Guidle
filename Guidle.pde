@@ -30,7 +30,7 @@ void setup(){
   initLines();
   drawLines();
   initKeys();
-  drawKeys();
+  drawKeys();//hello
   println("Word: " + word);
 }
 
@@ -158,7 +158,6 @@ void updateSpaceColors(){
             lines[currentSpace[0]].spaces[charEntered].spaceColor = 2;
           else
             lines[currentSpace[0]].spaces[charEntered].spaceColor = 1;
-          println("poop");
           for(onScreenKey key1 : keys)
             if(key1.letter == enteredWord.charAt(charEntered))
               if(key1.spaceColor != 3){

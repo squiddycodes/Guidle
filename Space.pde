@@ -14,7 +14,7 @@ public class Space{
     this.y = y;
   }
   
-  public Space(){
+  public Space(){//constructor
     
   }
   

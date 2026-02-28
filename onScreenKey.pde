@@ -35,7 +35,7 @@ public class onScreenKey extends Space{
     }else{//backspace
       rect(x,y ,115 * gameSize,90 * gameSize,10 * gameSize);
       fill(215, 218, 220);
-      text("<  ",x + 55 * gameSize,y + 55.4 * gameSize);
+      text("<  ",x + 55 * gameSize,y + 55 * gameSize);
       text("- ",x + 52 * gameSize,y + 53 * gameSize);
       text("- ",x + 60 * gameSize,y + 53 * gameSize);
       text("- ",x + 68 * gameSize,y + 53 * gameSize);
@@ -44,7 +44,7 @@ public class onScreenKey extends Space{
   }
   
   public void Update(){
-    if(letter != ']' && letter != '[' && currentSpace[1] != 5){
+    if(letter != ']' && letter != '[' && currentSpace[1] != 5){//if adding regular letter
       lines[currentSpace[0]].spaces[currentSpace[1]].letter = letter;
       lines[currentSpace[0]].spaces[currentSpace[1]].Draw();
       lines[currentSpace[0]].spaces[currentSpace[1]].anim1Frame = 2;
