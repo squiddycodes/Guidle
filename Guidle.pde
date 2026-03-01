@@ -12,6 +12,8 @@ String reasonForShake;//"Not enough letters" or "Not in word list"
 boolean gameDone = false;
 boolean manualPlay = false;
 final float gameSize = .5;//compared to 1000, 1300
+PrintWriter statsWriter;
+boolean testing = true;
 void setup(){
   currentSpace[0] = 0;
   currentSpace[1] = 0;
@@ -34,7 +36,8 @@ void setup(){
   drawLines();
   initKeys();
   drawKeys();//hello
-  println("Word: " + word);
+  if(!testing)
+    println("Word: " + word);
 }
 
 void draw(){
@@ -132,9 +135,11 @@ void updateSpaceColors(){
     textSize(25 * gameSize);
     text("Press any key\nto play again!",850 * gameSize,60 * gameSize);
     StringSelection data = new StringSelection("Guidle \"" + word + "\" " + (currentSpace[0] + 1) + "/6\n\n" + gameToEmojis());
-    try{
-    clipboard.setContents(data,data);
-    }catch(Exception e){print(e);}
+    if(!testing){
+      try{
+      clipboard.setContents(data,data);
+      }catch(Exception e){print(e);}
+    }
     gameDone = true;
   }else{
     for(int charEntered = 0; charEntered < 5; charEntered++){//for space in line
@@ -207,7 +212,7 @@ void checkAnims(){
 void setWord(){
   int wordIndex = int(random(wordList.length()/5));
   word = wordList.substring(wordIndex * 5, wordIndex * 5 + 5);
-  //word = "PUNCH";
+  //word = "DENIM";
 }
 
 void playerLose(){
