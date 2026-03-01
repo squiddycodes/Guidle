@@ -206,9 +206,8 @@ void checkAnims(){
 
 void setWord(){
   int wordIndex = int(random(wordList.length()/5));
-  word = String.valueOf(wordList.charAt(wordIndex * 5)) + String.valueOf(wordList.charAt(wordIndex * 5 + 1))
-  + String.valueOf(wordList.charAt(wordIndex * 5 + 2)) + String.valueOf(wordList.charAt(wordIndex * 5 + 3)) + String.valueOf(wordList.charAt(wordIndex * 5 + 4));//gets chosen word
-  //word = "SUSSY";
+  word = wordList.substring(wordIndex * 5, wordIndex * 5 + 5);
+  //word = "PUNCH";
 }
 
 void playerLose(){

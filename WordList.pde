@@ -12,6 +12,14 @@ boolean wordExists(String word){//checks if word is allowed
   return exists;
 }
 
+ArrayList<String> setWordArrayList(){
+  ArrayList<String> out = new ArrayList<String>();  
+  for(int i = 0; i < wordList.length(); i+=5){
+    out.add(wordList.substring(i, i + 5));
+  }
+  return out;
+}
+
 /*2026 comments - looking at this code after 4 years, it's hilarious to see that I chose to make a large string of all of the available words, and iterate through it, 
 adding 5 to the index to iterate through words XD i was so lazy, also it looks like there are more allowed words than the words list the app actually chooses from? weird,
 I think for the algorithm it'd be smart to just use the wordlist since that's what the app will choose from.. i guess if a real player was playing maybe they could choose more 
