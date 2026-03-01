@@ -13,4 +13,18 @@ class Line{
     for(Space space : spaces)
       space.Draw();
   }
+  
+  boolean performingAnim(){
+    for(Space s : spaces)
+      if(s.origX != -1)
+        return true;
+    return false;
+  }
+  
+  String getWord(){
+    String word = "";
+    for(Space s : spaces)
+      word += s.letter;
+    return word;
+  }
 }

@@ -10,6 +10,7 @@ boolean canPlay = true;
 String[] winMessages = {"+WHAT+HOW+HACKING", "SHEESH ur cracked", "very niiice", "nice JOB 8.5/10", "nice job, uhhh 7.5/10", "LETS GOOOOO CLUTCH"};
 String reasonForShake;//"Not enough letters" or "Not in word list"
 boolean gameDone = false;
+boolean manualPlay = false;
 final float gameSize = .5;//compared to 1000, 1300
 void setup(){
   currentSpace[0] = 0;
@@ -26,6 +27,8 @@ void setup(){
   textAlign(CENTER);
   text("GUIDLE",500 * gameSize,80 * gameSize);
   line(310 * gameSize,100 * gameSize,700 * gameSize,100 * gameSize);//line below guidle
+  textSize(30 * gameSize);
+  text("SPACE to toggle to auto-play", 500 * gameSize, 120 * gameSize);
   setWord();//set first word
   initLines();
   drawLines();
@@ -39,6 +42,12 @@ void draw(){
   checkAnims();
   drawSpaces();
   drawKeys();
+  boolean doSmart = true;
+  for(Line l : lines)
+    if(l.performingAnim())
+      doSmart = false;
+  if(doSmart && !manualPlay)
+    smartMove();
   strokeWeight(1);
 }
 
@@ -51,9 +60,13 @@ void mousePressed(){//stuff only happens when stuff is pressed, draw() is only u
 }
 
 void keyPressed() {
+  if(keyPressed && key == ' '){
+    manualPlay = !manualPlay;//toggle person playing or algorithm
+  }
   if(gameDone && canPlay){//start new game
     setup();
     gameDone = false;
+    
   }else{
     if(canPlay){
     if (keyPressed) {
@@ -174,7 +187,7 @@ void updateSpaceColors(){
       }
     }
   }
-if(currentSpace[0] != 5)
+if(currentSpace[0] != 5 && !gameDone)
   currentSpace[0] += 1;//new line
 else
   if(!word.equals(enteredWord)){
@@ -230,6 +243,7 @@ void drawBackground(){
   stroke(18, 18, 19);
   fill(18, 18, 19);
   rect(0,130 * gameSize,1000 * gameSize,750 * gameSize);
+  fill(255);
 }
 
 void drawLines(){
