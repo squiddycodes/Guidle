@@ -39,7 +39,9 @@ void smartMove(){
       refineOnGreens();
       refineOnGrays();
       refineOnYellows();//should go after refining greens bc uses correctIndexes
-      enterWord(wordArrayList.get(0));
+      String word = pickWordFromList();
+      enterWord(word);
+      //enterWord(wordArrayList.get(0));
       wordArrayList.remove(0);
     }
     playerMove();
@@ -56,6 +58,19 @@ void smartMove(){
     setup();
     gameDone = false;
   }
+}
+
+String pickWordFromList(){//so far, just picks non-duplicate letter words (better for probing)
+  for(String w : wordArrayList){
+    boolean hasDupe = false;
+    for(int i = 0; i < 5; i++)
+      for(int j = i + 1; j < 5; j++)
+        if(w.charAt(i) == w.charAt(j))
+          hasDupe = true;
+    if(!hasDupe)
+      return w;
+  }
+  return wordArrayList.get(0);
 }
 
 void refineOnYellows(){//for each yellow, can NOT be in that position, must be in str at position where green isn't
