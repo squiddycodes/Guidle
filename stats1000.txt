@@ -1,0 +1,91 @@
+1000 Runs/Word - Winner: Trace
+
+Starting Word:CRANE
+Wins:998.0
+Losses:2.0
+Winrate:0.998
+Avg Winning Line:3.3797596
+
+Starting Word:SLATE
+Wins:999.0
+Losses:1.0
+Winrate:0.999
+Avg Winning Line:3.5225224
+
+Starting Word:TRACE
+Wins:1000.0
+Losses:0.0
+Winrate:1.0
+Avg Winning Line:3.42
+
+Starting Word:RAISE
+Wins:997.0
+Losses:3.0
+Winrate:0.997
+Avg Winning Line:3.5747242
+
+Starting Word:STARE
+Wins:998.0
+Losses:2.0
+Winrate:0.998
+Avg Winning Line:3.5490983
+
+Starting Word:TALES
+Wins:1000.0
+Losses:0.0
+Winrate:1.0
+Avg Winning Line:3.494
+
+Starting Word:AEROS
+Wins:997.0
+Losses:3.0
+Winrate:0.997
+Avg Winning Line:3.5987964
+
+Starting Word:SOARE
+Wins:996.0
+Losses:4.0
+Winrate:0.996
+Avg Winning Line:3.5552208
+
+Starting Word:AROSE
+Wins:991.0
+Losses:9.0
+Winrate:0.991
+Avg Winning Line:3.5206861
+
+Starting Word:SERAI
+Wins:988.0
+Losses:12.0
+Winrate:0.988
+Avg Winning Line:3.6285424
+
+Starting Word:ARISE
+Wins:1000.0
+Losses:0.0
+Winrate:1.0
+Avg Winning Line:3.517
+
+Starting Word:AESIR
+Wins:995.0
+Losses:5.0
+Winrate:0.995
+Avg Winning Line:3.5608041
+
+Starting Word:ALOES
+Wins:997.0
+Losses:3.0
+Winrate:0.997
+Avg Winning Line:3.5095286
+
+Starting Word:LARES
+Wins:994.0
+Losses:6.0
+Winrate:0.994
+Avg Winning Line:3.6056337
+
+Starting Word:SHADE
+Wins:996.0
+Losses:4.0
+Winrate:0.996
+Avg Winning Line:3.551205
