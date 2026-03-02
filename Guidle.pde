@@ -12,13 +12,12 @@ String reasonForShake;//"Not enough letters" or "Not in word list"
 boolean gameDone = false;
 boolean manualPlay = false;
 final float gameSize = .5;//compared to 1000, 1300
-PrintWriter statsWriter;
-boolean testing = true;
+boolean testing = true; //TOGGLE TESTING (only display every word swap in terminal) ---------------------------------------------------------------------------------------------------
 void setup(){
   currentSpace[0] = 0;
   currentSpace[1] = 0;
   size(500,650);//1000, 1300 at gameSize = 1
-  frameRate(30);
+  frameRate(3000);//CONTROL THE SPEED OF THE SIM---------------------------------------------------------------------------------------------------------------------------------------
   background(18, 18, 19);//grayish
   stroke(43 * gameSize, 43 * gameSize, 44 * gameSize);
   strokeWeight(2 * gameSize);

@@ -19,7 +19,7 @@ onScreenKey[] getKeysFromStr(String word){
 
 String[] startingWords = {"CRANE", "SLATE", "TRACE", "RAISE", "STARE", "TALES", "AEROS", "SOARE", "AROSE", "SERAI", "ARISE", "AESIR", "ALOES", "LARES", "SHADE"};
 ArrayList<Integer> wordStats = new ArrayList<Integer>();// each element is a game, won on X line, or 0 if lost - num games = wordStats.size()
-int testsPerWord = 5;
+int testsPerWord = 1000;//NUM TESTS TO RUN ------------------------------------------------------------------------------------------------------------------------------------------------------
 int totalTests = 0;
 
 ArrayList<String> wordArrayList = new ArrayList<String>();
@@ -50,7 +50,7 @@ void smartMove(){
     totalTests++;
     String endGameStats = evalEndGameState();
     if(!testing){
-      print("Test " + totalTests + "  ================================================================\n" + endGameStats);
+      println("Test " + totalTests + "  ================================================================\n" + endGameStats);
     }
     if(totalTests % testsPerWord == 0){//switch words every testsPerWord words
       float[] stats = evalWordStats();
