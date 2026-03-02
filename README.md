@@ -1,11 +1,11 @@
 # Guidle
-
+## Introduction
 Guidle: Processing 3.5.4: Java
 
 I started this project a short time after starting to play wordle daily; the reason being 
 I wanted to make an AI for the game but I heard that the New York Times was buying it 
 (and will likely make it paid soon). So instead I just decided to make my own before making
-an AI, so here is my totally not Wordle copy, the original idea, Guidle
+an AI, so here is my totally not Wordle copy, the original idea, Guidle (2026 now with autonomous player!)
 
 My code is getting cleaner and cleaner now that I’m taking a real college comp sci class.
 Guidle has 4 classes; main, Line, Space and onScreenKey. Each Line object has 5 spaces and
@@ -29,12 +29,23 @@ The on screen key class extends space so it has the x, y, color and letter and i
 y and mouse events to see when the user interacts with them (home cooked buttons). 
 
 This is a lot of text, but all in all the way I set up this project was very intuitive and I
-like where I’m going in terms of design for my programs. This project was fun to code and I look forward to making the AI soon!
+like where I’m going in terms of design for my programs.
 
-Lines of Code: ~500
+# Using the App
+## Guidle.pde Settings
+* **Boolean ManualPlay** on line 13 can be set for if you want to regularly play the game, using the keyboard or onscreen keyboard. You can also press **space bar** to toggle between autonomous and manual play (some bugs may occur if going back and forth)
+* Default framerate is max (set to 3000 but probably just matches the max java processing handles) - normal is 30 from what I used to actually "play" the game. Set framerate on line **20 in Guidle.pde**.
+* if you want to change the size of the application, change gamesize on line 14, and size on line 19 in **Guidle.pde**
+* Toggle what shows in console by setting **boolean testing** on line **15 in Guidle.pde**. testing=true will show only every **testsPerWord** tests, showing the stats of the given word after running all tests. Having this option on will show every test, what line it won on and show the tests as they run. If testing is off, when you finish a game, it'll copy the game results to your clipboard similar to how Wordle does.
 
-Hours spent: ~15
+## Solver.pde Settings
+* **startingWords** on line 20 is where you can set what starting words you want to test. All words will play games against randonly chosen words, using the same solver logic for good comparison.
+*  **testsPerWord** on line 22 sets the number of games to allow for word in startingWords. After reaching this number on the first startingWord, it'll print the word's stats and go to the second, then repeat.
+
+# Stats
+Lines of Code: ~675
+
+Hours spent: ~20
 
 Lmk if u have questions!
 
-NOTE: if you want to change the size of the application, change gamesize on line 13, and size on line 17
